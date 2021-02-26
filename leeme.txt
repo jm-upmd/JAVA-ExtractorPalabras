@@ -1,0 +1,36 @@
+extraePalabras
+Programa que extrae palabras que cumplen una serie de requisitos de un fichero de texto.
+Mediante parámetros de entrada se le indica el fichero fuente del que extraer las palabras, y la longintud mínima que han de tener las palabras.
+Aidicionalmente se le pasa tambíen como parámetro un fichero "fichero de conversión" que contine una lista de caracteres que se han de convertir en otros en las palabras extraidas.
+Por último se puede pasar un cuarto parámetro opcional para indicar el nombre del fichero de salida con las palabras seleccionadas. Si este parámetro no es suministrado, el nombre de este fichero será el mismo que el de entrada con el sufijo "_SALIDA" en el nombre.
+Las palabras de la lista extraída están en mayúscula, y no hay duplicados.
+No se extraen las palabras que en el texto original comienzan con caracter mayúscula.
+Si el fichero de salida ya existe las nuevas palabras extraidas serán añadidas a las ya existentes, solo aquellas que no existan previamente en la lista.
+
+En el .zip se incluye:
+	- leeme.txt -> Este fichero con información para el uso del programa. 
+	- extraePalabras.jar -> Fichero ejecutable java.
+	- f_tabla_co.txt -> Fichero con tabla de sustitución de caracteres. Se puede modificar según necesidades.
+	- Cuento Criada.txt	-> 	Ejemplo de fichero fuente del que se ha extraido palabras.
+	- Cuento Criada_SALIDA.txt -> Fichero con lista de palabras con tamaño mayor o igual que 5.
+
+
+Sintaxis:
+
+extraePalabras.jar -c <f_conv> -e <f_ent> [-s <f_sal>] -n <min>
+
+<f_con>	Fichero con tabla de conversión de caracteres.
+<f_ent>	Fichero del que extraer las palabras.
+<f_sal> Opcional. Fichero de salida con la lista de palabras.
+		Si no se facilita, el nombre del fichero de salida será el mismo que <fich_ent> con el sufijo "_SALIDA".
+<min>	Tamaño mínimo de las palabras a extraer de <fich_ent>	
+
+Ejemplo de ejecución:
+
+java -jar extraePalabras.jar -c f_tabla_co.txt -e "C:\Mi Directorio\Cuento Criada.txt"  -n 5
+
+Notas:
+	- En este caso se omite el parámetro opcional -s, por lo que la ejeucución generará un fichero de salida con nombre:
+"C:\Mi Directorio\entrada_SALIDA.txt".
+	- Los parámetros se pueden escribir en cualquier orden.
+	- Se pueden dejar tantos espacios  como se quiera entre ellos, o entre la letra de opción y el parametro.
