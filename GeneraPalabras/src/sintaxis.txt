@@ -1,0 +1,18 @@
+Sintaxis:
+
+extraePalabras.jar -c <f_conv> -e <f_ent> [-s <f_sal>] -n <min>
+
+<f_con>	Fichero con tabla de conversión de caracteres.
+<f_ent>	Fichero del que extraer las palabras.
+<f_sal>	Opcional. Fichero de salida con la lista de palabras.
+	Si no se facilita el nombre del fichero de salida será el mismo que <fich_ent> con el sufijo "_SALIDA" en el nombre.
+<min>	Tamaño mínimo de las palabras a extraer de <fich_ent>	
+
+Ejemplo:
+java -jar extraePalabras.jar -c conversion.txt -e "C:\Mi Directorio\entrada.txt"  -n 5
+
+Notas:
+	- En este caso se omite el parámetro opcional -s, por lo que la ejeucución generará un fichero de salida con nombre:
+"C:\Mi Directorio\entrada_SALIDA.txt".
+	- Los parámetros se pueden escribir en cualquier orden.
+	- Se pueden dejar tantos espacios  como se quiera entre ellos, o entre la letra de opción y el parametro.
