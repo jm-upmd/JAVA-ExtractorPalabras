@@ -2,9 +2,9 @@ extraePalabras
 Programa que extrae palabras que cumplen una serie de requisitos de un fichero de texto.
 Mediante parámetros de entrada se le indica el fichero fuente del que extraer las palabras, y la longintud mínima que han de tener las palabras.
 Aidicionalmente se le pasa tambíen como parámetro un fichero "fichero de conversión" que contine una lista de caracteres que se han de convertir en otros en las palabras extraidas.
-Por último se puede pasar un cuarto parámetro opcional para indicar el nombre del fichero de salida con las palabras seleccionadas. Si este parámetro no es suministrado, el nombre de este fichero será el mismo que el de entrada con el sufijo "_SALIDA" en el nombre.
-Las palabras de la lista extraída están en mayúscula, y no hay duplicados.
-No se extraen las palabras que en el texto original comienzan con caracter mayúscula.
+Por último se puede pasar un cuarto parámetro opcional para indicar el nombre del fichero de salida con las palabras seleccionadas. Si este parámetro no es suministrado, el nombre de este fichero será el mismo que el de entrada con el sufijo "_SALIDA" en el nombre y misma extendión si el original la tuviera.
+Las palabras de la lista extraída estárán en mayúscula, y no habrá duplicados.
+No se extraen las palabras que en el texto original contengan algún caracter en mayúscula.
 Si el fichero de salida ya existe las nuevas palabras extraidas serán añadidas a las ya existentes, solo aquellas que no existan previamente en la lista.
 
 En el .zip se incluye:
@@ -31,6 +31,6 @@ java -jar extraePalabras.jar -c f_tabla_co.txt -e "C:\Mi Directorio\Cuento Criad
 
 Notas:
 	- En este caso se omite el parámetro opcional -s, por lo que la ejeucución generará un fichero de salida con nombre:
-"C:\Mi Directorio\entrada_SALIDA.txt".
+"C:\Mi Directorio\Cuento Criada_SALIDA.txt".
 	- Los parámetros se pueden escribir en cualquier orden.
 	- Se pueden dejar tantos espacios  como se quiera entre ellos, o entre la letra de opción y el parametro.
